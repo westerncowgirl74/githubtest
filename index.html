@@ -1,11 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github</title>
-</head>
+<html>
+<title>Wagon Wheel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("Images/onepage_restaurant.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+</style>
 <body>
-    <h1>Wlecome to Github</h1>
+
+<!-- Links (sit on top) -->
+<div class="ww-top">
+  <div class="ww-row ww-padding ww-black">
+    <div class="ww-col s3">
+      <a href="#" class="ww-button ww-block ww-black">HOME</a>
+    </div>
+    <div class="ww-col s3">
+      <a href="#about" class="ww-button ww-block ww-black">ABOUT</a>
+    </div>
+    <div class="ww-col s3">
+      <a href="#menu" class="ww-button ww-block ww-black">MENU</a>
+    </div>
+    <div class="ww-col s3">
+      <a href="#where" class="ww-button ww-block ww-black">WHERE</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg ww-display-container ww-grayscale-min" id="home">
+  <div class="ww-display-bottomleft ww-center ww-padding-large ww-hide-small">
+    <span class="ww-tag">Open from 6am to 1pm</span>
+  </div>
+  <div class="ww-display-middle ww-center">
+    <span class="ww-text-white" style="font-size:90px">The<br>Wagon Wheel</span>
+  </div>
+  <div class="ww-display-bottomright ww-center ww-padding-large">
+    <span class="ww-text-white">36457 N. Cave Creek RD Cave Creek, AZ 85331</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="ww-sand ww-grayscale ww-large">
+
+<!-- About Container -->
+<div class="ww-container" id="about">
+  <div class="ww-content" style="max-width:700px">
+    <h5 class="ww-center ww-padding-64"><span class="ww-tag ww-wide">ABOUT THE CAFE</span></h5>
+    <p>The Cafe was purchased by Jim and Della Yates in June of 1989. Jim a certified 
+    executive chef had worked in the valley at restaurants such as The Pointe Resort, Tony Romas and later co-owned Michaels Fountain View.</p>
+    <p>We serve fresh made-to-order breakfast and lunch, as well as a selection of sides and salads and other good stuff.</p>
+    <div class="ww-panel ww-leftbar ww-light-grey">
+      <p><i>"Nothing like Homemade bisquits and gravy."</i></p>
+      <p>Chef and Owner: Jim Yates</p>
+    </div>
+    <img src="/Images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="ww-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 1pm.</p>
+    <p><strong>Address:</strong> 36457 N Cave Creek RD, Cave Creek AZ 85331</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="ww-container" id="menu">
+  <div class="ww-content" style="max-width:700px">
+ 
+    <h5 class="ww-center ww-padding-48"><span class="ww-tag ww-wide">THE MENU</span></h5>
+  
+    <div class="ww-row ww-center ww-card ww-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Breakfast');" id="myLink">
+        <div class="ww-col s6 tablink">Breakfast</div></a>
+
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Lunch');" id="myLink">
+         <div class="ww-col s6 tablink">Lunch</div></a>
+    </div>
+    <div class="ww-row ww-center ww-card ww-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Specials');">
+          <div class="ww-col s6 tablink">Specials</div></a>
+
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+         <div class="ww-col s6 tablink">Drinks</div></a>
+
+    </div>
+
+    <div id="Breakfast" class="ww-container menu ww-padding-48 ww-card">
+      <h5><b>STEAK AND EGGS</b></h5>
+      <p class="ww-text-grey">6oz sirloin, 2 eggs, homefries and choice of bread  $8.50</p>
+    
+      <h5>Chicken Fried Steak</h5>
+      <p class="ww-text-grey">Breaded beef fritter covered with sausage gravy, 2 eggs, homefries and choice of bread  $8.00</p>
+    
+      <h5>He-Person</h5>
+      <p class="ww-text-grey">2 eggs, 2 sausage pattys, 2 pieces bacon, 2 pancakes 7.50</p>
+    
+      <h5>Bacon and eggs</h5>
+      <p class="ww-text-grey">2 eggs, bacon, homefries and choice of bread 6.50</p>
+    
+      <h5>Pancakes</h5>
+      <p class="ww-text-grey">1 Cake  2.00</p>
+      <p class="ww-text-grey">2 Cakes 3.00</p>
+
+      <h5>French Toast</h5>
+      <p class="ww-text-grey">2 Slices  2.00</p>
+      <p class="ww-text-grey">3 Skices 3.00</p>
+    </div>
+    <div id="Lunch" class="ww-container menu ww-padding-48 ww-card">
+        <h5>Patty Melt</h5>
+        <p class="ww-text-grey">1/2 pound burger on grilled rye with swiss cheese and grilled onion  $8.50</p>
+      
+        <h5>Gr Chili w/ monteray jack cheese</h5>
+        <p class="ww-text-grey">1/3lb ????</p>
+        <p class="ww-text-grey">1/2lb ????</p>
+      
+        <h5>He-Person</h5>
+        <p class="ww-text-grey">2 eggs, 2 sausage pattys, 2 pieces bacon, 2 pancakes 7.50</p><br>
+      
+        <h5>Bacon and eggs</h5>
+        <p class="ww-text-grey">2 eggs, bacon, homefries and choice of bread 6.50</p><br>
+      
+        <h5>Pancakes</h5>
+        <p class="ww-text-grey">With syrup, butter and lots of berries 8.50</p>
+      </div>
+      <div id="Specials" class="ww-container menu ww-padding-48 ww-card">
+          <h4>Monday</h4>
+          <p class="ww-text-grey">Meatloaf 7.50</p>
+          <p>Served with mashed potatoes, gravy and vegetable</p>
+          <h4>Tuesday</h4>
+          <p class="ww-text-grey">Chili Size 2.00</p>
+      </div>  
+    <div id="Drinks" class="ww-container menu ww-padding-48 ww-card">
+      <h4>HOT DRINKS</h4>
+      <p class="ww-text-grey">Regular coffee 2.50</p>
+      <p class="ww-text-grey">Hot Chocholate 2.00</p>
+      <p class="ww-text-grey">Hot tea 2.00</p><br>
+    
+      <h4>COLD DRINKS</h4>
+      <p class="ww-text-grey">Iced Tea 2.00</p>
+      <p class="ww-text-grey">Lemonade 2.00</p>
+      <p class="ww-text-grey">Milk LG 2.00  SM 1.50</p>
+      <p class="ww-text-grey">Chocholate Milk LG 2.00  SM 1.50</p>
+      
+      <h5>SODA</h5>
+      <p class="ww-text-grey">Coke, Sprite, Dr.Pepper, Caffiene free diet coke</p>
+      <h5>JUICE</h5>
+      <p class="ww-text-grey">Apple, Orange, Grapefruit, Cranberry LG 2.00  SM 1.00</p>
+    </div>  
+    <img src="/Images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="ww-container" id="where" style="padding-bottom:32px;">
+  <div class="ww-content" style="max-width:700px">
+    <h5 class="ww-center ww-padding-48"><span class="ww-tag ww-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at 36457 N Cave Creek RD.</p>
+    <div id="googleMap" class="ww-sepia" style="width:100%;height:400px;"></div>
+    <p><span class="ww-tag">FYI!</span> We offer catering for small events. We understand your needs both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="https://wagonwheel" target="_blank">
+      <p><input class="ww-input ww-padding-16 ww-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="ww-input ww-padding-16 ww-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="ww-input ww-padding-16 ww-border" type="datetime-local" placeholder="Date and time" required name="date" value="2021-11-16T20:00"></p>
+      <p><input class="ww-input ww-padding-16 ww-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="ww-button ww-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="ww-center ww-light-grey ww-padding-48 ww-large">
+  <p>Also Visit us on <a href="FaceBook"  class="ww-hover-text-green"></a>Facebook</a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" ww-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " ww-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&amp;callback=myMap"></script>
+
+
 </body>
+
+
 </html>
