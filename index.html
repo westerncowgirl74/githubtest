@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-<title>Wagon Wheel</title>
+<title>wagonwheelcoffeeshop.com</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
-<script  src="index.js"></script>
 <style>
 body, html {
     height: 100%;
@@ -20,6 +19,7 @@ body, html {
     display: none;
 }
 </style>
+
 <body>
 
 <!-- Links (sit on top) -->
@@ -73,6 +73,7 @@ body, html {
     <div class="ww-panel ww-leftbar ww-light-grey">
       <p><i>"Nothing like Homemade bisquits and gravy."</i></p>
     </div>
+    
   <!-- Image Slide show -->
         <div class="content">
           <div class="images">
@@ -81,6 +82,7 @@ body, html {
             <img src="/images/food2.jpg">
             <img src="/images/food3.jpg">
             <img src="/images/food4.jpg">
+            <img src="/images/food5.jpg">
           </div>
     </div>
 
@@ -292,7 +294,6 @@ body, html {
       <h5>JUICE</h5>
       <p class="ww-text-grey">Apple, Orange, Grapefruit, Cranberry LG.... $3.00  SM.... $2.00</p>
     </div>  
-    <img src="/images/wwpic.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
   </div>
 </div>
 
@@ -321,7 +322,6 @@ body, html {
 
 <script>
 
-
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
@@ -337,6 +337,22 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " ww-dark-grey";
 }
 document.getElementById("myLink").click();
+
+// Slide show
+var indexValue = 0;
+function slideShow(){
+  setTimeout(slideShow, 2500);
+  var x;
+  const img = document.querySelectorAll("img");
+  for(x = 0; x < img.length; x++){
+    img[x].style.display = "none";
+  }
+  indexValue++;
+  if(indexValue > img.length){indexValue = 1}
+  img[indexValue -1].style.display = "block";
+}
+slideShow();
+
 </script>
 </body>
 
