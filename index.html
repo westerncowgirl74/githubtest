@@ -77,12 +77,12 @@ body, html {
   <!-- Image Slide show -->
         <div class="content">
           <div class="images">
-            <img src="./images/food.jpg">
-            <img src="./images/food1.jpg">
-            <img src="./images/food2.jpg">
-            <img src="./images/food3.jpg">
-            <img src="./images/food4.jpg">
-            <img src="./images/food5.jpg">
+            <img class="img-gallery" src="./images/food.jpg">
+            <img class="img-gallery" src="./images/food1.jpg">
+            <img class="img-gallery" src="./images/food2.jpg">
+            <img class="img-gallery" src="./images/food3.jpg">
+            <img class="img-gallery" src="./images/food4.jpg">
+            <img class="img-gallery" src="./images/food5.jpg">
           </div>
     </div>
 
@@ -343,7 +343,7 @@ var indexValue = 0;
 function slideShow(){
   setTimeout(slideShow, 2500);
   var x;
-  const img = document.querySelectorAll("img");
+  const img = document.querySelectorAll(".img-gallery");
   for(x = 0; x < img.length; x++){
     img[x].style.display = "none";
   }
